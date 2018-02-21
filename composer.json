@@ -1,0 +1,35 @@
+{
+    "name": "webignition/php-ie-detector",
+    "description": "Parses a user agent string to detect Internet Explorer",
+    "keywords": ["user-agent", "detector", "IE", "Internet Explorer"],
+    "homepage": "https://github.com/webignition/php-ie-detector",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jon Cram",
+            "email": "jon@webignition.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "webignition\\IEDetector\\": "src/",
+            "webignition\\Tests\\IEDetector\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --colors=always",
+        "cs": "./vendor/bin/phpcs src tests --colors --standard=PSR2",
+        "ci": [
+            "@composer cs",
+            "@composer test"
+        ]
+    },
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "squizlabs/php_codesniffer": "3.*"
+    }
+}
